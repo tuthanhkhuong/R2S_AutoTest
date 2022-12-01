@@ -54,8 +54,6 @@ public class TS_02_Login {
 	   loginPage.clickToLoginButton();
 	   Assert.assertTrue(loginPage.isLoginErrorMessage("Login was unsuccessful. Please correct the errors and try again"));
 	   Assert.assertTrue(loginPage.isLoginErrorMessage("No customer account found"));
-	   
-	   
    }
    
 }
