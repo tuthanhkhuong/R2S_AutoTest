@@ -49,10 +49,10 @@ public class TS_01_Register {
    
    //Dang ky tai khoan (Thay doi gia tri Email moi lan dang ky)
    //@Test
-   public void TC_04_RegisterWithExistsEmail() {
+   public void TC_03_RegisterSuccess() {
 	   registerPage.refeshCurrentPage(driver);
-	   registerPage.clickToMaleRaido();
 	   
+	   registerPage.clickToMaleRaido();   
 	   registerPage.inputToRegisterFirstnameTextBox("AAA");
 	   registerPage.inputToRegisterLastnameTextBox("BBB");
 	   registerPage.clickToRegisterDayOfBirth("1");
@@ -66,6 +66,27 @@ public class TS_01_Register {
 	   registerPage.clickToRegisterButton();
 	   Assert.assertTrue(registerPage.isRegisterSuccess("Your registration completed"));
    }
+   
+   
+   @Test
+   public void TC_04_RegisterWithExistsEmail() {
+	   registerPage.refeshCurrentPage(driver);
+	   
+	   registerPage.clickToMaleRaido();   
+	   registerPage.inputToRegisterFirstnameTextBox("AAA");
+	   registerPage.inputToRegisterLastnameTextBox("BBB");
+	   registerPage.clickToRegisterDayOfBirth("1");
+	   registerPage.clickToRegisterMonthOfBirth("May");
+	   registerPage.clickToRegisterYearOfBirth("2000");
+	   registerPage.inputToRegisterEmailTextBox("finaltest@gmail.com");
+	   registerPage.inputToRegisterCompanyTextBox("none");
+	   registerPage.inputToRegisterPasswordTextBox("abcdef");
+	   registerPage.inputToRegisterConfirmPasswordTextBox("abcdef");
+	   
+	   registerPage.clickToRegisterButton();
+	   Assert.assertTrue(registerPage.isRegisterEmailTextBoxWithExistsEmail("The specified email already exists"));
+   }
+   
    
    @Test
    public void TC_05_RegisterWithPasswordLessThan6Keys() {
