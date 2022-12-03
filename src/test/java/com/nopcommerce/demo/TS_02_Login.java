@@ -56,4 +56,37 @@ public class TS_02_Login {
 	   Assert.assertTrue(loginPage.isLoginErrorMessage("No customer account found"));
    }
    
+   @Test
+   public void TC_04_LoginWithRegisteredEmail() {
+	   loginPage.refeshCurrentPage(driver);
+	   loginPage.inputToEmailTextBox("finaltest1@gmail.com");
+	   loginPage.inputToPasswordTextBox("");
+	   loginPage.clickToLoginButton();
+	   Assert.assertTrue(loginPage.isRegisterdEmailErrorMessage("Login was unsuccessful. Please correct the errors and try again"));
+	   Assert.assertTrue(loginPage.isRegisterdEmailErrorMessage("The credentials provided are incorrect"));
+   }
+   
+   @Test
+   public void TC_05_LoginWithRegisteredEmail() {
+	   loginPage.refeshCurrentPage(driver);
+	   loginPage.inputToEmailTextBox("finaltest1@gmail.com");
+	   loginPage.inputToPasswordTextBox("abcdef123555");
+	   loginPage.clickToLoginButton();
+	   Assert.assertTrue(loginPage.isRegisterdEmailErrorMessage("Login was unsuccessful. Please correct the errors and try again"));
+	   Assert.assertTrue(loginPage.isRegisterdEmailErrorMessage("The credentials provided are incorrect"));
+   }
+   
+   @Test
+   public void TC_06_LoginWithRegisteredEmail() {
+	   loginPage.refeshCurrentPage(driver);
+	   loginPage.inputToEmailTextBox("finaltest1@gmail.com");
+	   loginPage.inputToPasswordTextBox("abcd1234");
+	   loginPage.clickToLoginButton();
+	   
+	   String parentID = loginPage.getWindowHandle(driver);
+	   loginPage.switchToWindowByID(parentID);
+	   
+	   Assert.assertEquals(loginPage.getPageTitle(driver), "nopCommerce demo store");
+	   driver.switchTo().window(parentID);
+   }
 }

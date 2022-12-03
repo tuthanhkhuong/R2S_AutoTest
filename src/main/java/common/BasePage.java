@@ -1,5 +1,7 @@
 package common;
 
+import java.util.Set;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -51,4 +53,9 @@ public class BasePage {
 	public String getTextElement(WebDriver driver, String locater) {
 		return getElement(driver, locater).getText();
 	}
+	
+	public String getWindowHandle(WebDriver driver) {
+		return driver.getWindowHandle();
+	}
+	
 }
