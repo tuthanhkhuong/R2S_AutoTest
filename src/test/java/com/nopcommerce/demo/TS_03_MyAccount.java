@@ -31,7 +31,7 @@ public class TS_03_MyAccount extends BaseTest {
 
 	@AfterClass
 	public void afterClass() {
-		// driver.quit();
+		driver.quit();
 	}
 
 	@Test

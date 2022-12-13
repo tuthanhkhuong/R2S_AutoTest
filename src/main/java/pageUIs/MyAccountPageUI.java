@@ -1,7 +1,7 @@
 package pageUIs;
 
 public class MyAccountPageUI {
-	//My account
+	//-------------My account-------------
 	public static final String MYACCOUNT_LINK = "//a[@class='ico-account']";
 	
 	public static final String MYACCOUNT_MALE_RADIO_BUTTON = "//input[@id='gender-male']";
@@ -19,19 +19,18 @@ public class MyAccountPageUI {
 	
 	public static final String MYACCOUNT_SAVE_BUTTON = "//button[@id='save-info-button']";
 	
-	//Login page
+	//-------------Login page-------------
 	public static final String EMAIL_TEXTBOX = "//input[@id='Email']";
 	public static final String LOGIN_BUTTON = "//button[@class='button-1 login-button']";
 	public static final String PASSWORD_TEXTBOX = "//input[@id='Password']";
 	
-	//Address
+	//-------------Address-------------
 
 	public static final String MYACCOUNT_ADDRESSES_LABEL = "//div[@class='listbox']//a[text()='Addresses']";
 	public static final String MYACCOUNT_ADDRESSES_ADDNEW_BUTTON = "//button[text()='Add new']";
 	public static final String MYACCOUNT_ADDRESSES_SAVE_BUTTON = "//button[@class='button-1 save-address-button']";
 	
 	
-	//Nhap tt addresses
 	public static final String MYACCOUNT_ADDRESSES_FIRSTNAME_TEXTBOX = "//input[@id='Address_FirstName']";
 	public static final String MYACCOUNT_ADDRESSES_LASTNAME_TEXTBOX = "//input[@id='Address_LastName']";
 	public static final String MYACCOUNT_ADDRESSES_EMAIL_TEXTBOX = "//input[@id='Address_Email']";
@@ -51,7 +50,7 @@ public class MyAccountPageUI {
 	public static final String ADDRESS_COUNTRY_TEXT = "//li[@class='country']";
 	
 	
-	//Change Password
+	//-------------Change Password-------------
 	//a[text()='Change password']
 	public static final String CHANGEPASSWORD_LABLE = "//a[text()='Change password']";
 	public static final String CHANGEPASSWORD_ADDOLD_TEXTBOX = "//input[@id='OldPassword']";

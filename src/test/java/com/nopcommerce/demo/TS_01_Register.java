@@ -39,7 +39,7 @@ public class TS_01_Register extends BaseTest {
 
 	@AfterClass
 	public void afterClass() {
-		// driver.quit();
+		driver.quit();
 	}
 
 	@Test

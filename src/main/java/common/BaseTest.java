@@ -11,6 +11,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseTest {
 	WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
+	
 
 	public WebDriver getBrowserDriver(String browserName, String url) {
 		if (browserName.equalsIgnoreCase("chrome")) {

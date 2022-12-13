@@ -25,12 +25,14 @@ public class TS_02_Login extends BaseTest {
 
 	@AfterClass
 	public void afterClass() {
-		// driver.quit();
+		driver.quit();
 	}
 
 	@Test
 	public void TC_01_LoginWithEmptyData() {
 		loginPage.clickToLoginButton();
+		
+		//THEM MAY CAI MESS DAU *
 		Assert.assertTrue(loginPage.isEmailErrorMessage("Please enter your email"));
 	}
 

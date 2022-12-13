@@ -1,5 +1,6 @@
 package common;
 
+import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
@@ -15,6 +16,15 @@ public class BasePage {
 	//getter
 	public static BasePage getBasePage() {
 		return new BasePage();
+	}
+	
+	public WebElement findElement(WebDriver driver, String locator) {
+		return driver.findElement(getByXpath(locator));
+	}
+	
+	public List<WebElement> findElements(WebDriver driver, String locator) {
+		return driver.findElements(getByXpath(locator));
+		
 	}
 	
 	public void openUrl(WebDriver driver, String pageUrl) {
