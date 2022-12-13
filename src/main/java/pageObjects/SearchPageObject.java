@@ -52,10 +52,10 @@ public class SearchPageObject extends BasePage{
 	}
 	
 	public boolean isVerifyProductHaveKey(String value) {
-		List<WebElement> el = findElements(driver, SearchPageUI.SEARCH_PRODUCT_TITLE);
+		List<WebElement> webElements = findElements(driver, SearchPageUI.SEARCH_PRODUCT_TITLE);
 		boolean verify = true;
-		for (WebElement o : el) {
-			if (o.getText().contains(value)) {
+		for (WebElement w : webElements) {
+			if (w.getText().contains(value)) {
 				return verify = true;
 			} else {
 				return verify = false;
