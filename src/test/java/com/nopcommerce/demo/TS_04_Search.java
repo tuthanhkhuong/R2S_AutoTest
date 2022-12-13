@@ -1,10 +1,6 @@
 package com.nopcommerce.demo;
 
-import java.util.List;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -14,7 +10,6 @@ import org.testng.annotations.Test;
 import common.BaseTest;
 import pageObjects.LoginPageObject;
 import pageObjects.SearchPageObject;
-import pageUIs.SearchPageUI;
 
 public class TS_04_Search extends BaseTest{
 	WebDriver driver;
