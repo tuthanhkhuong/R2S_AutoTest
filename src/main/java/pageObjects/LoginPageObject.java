@@ -42,6 +42,7 @@ public class LoginPageObject extends BasePage {
 		return message.contains(value);
 	}
 	
+	
 	public void switchToWindowByID(String parentID) {
 		Set<String> allWindows = driver.getWindowHandles();
 		for(String runWindow : allWindows) {

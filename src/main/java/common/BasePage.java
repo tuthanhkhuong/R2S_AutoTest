@@ -5,9 +5,11 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
-	
+	public WebDriverWait explicitWait;
+
 	//constructor
 	
 	//getter
@@ -48,6 +50,12 @@ public class BasePage {
 	
 	public void clickToElement(WebDriver driver, String locater) {
 		getElement(driver, locater).click();
+		
+	}
+	
+	public void clickAndSenkeyToElement(WebDriver driver, String locater, String valueInput) {
+		getElement(driver, locater).click();
+		getElement(driver, locater).sendKeys(valueInput);
 	}
 	
 	public String getTextElement(WebDriver driver, String locater) {
@@ -56,6 +64,12 @@ public class BasePage {
 	
 	public String getWindowHandle(WebDriver driver) {
 		return driver.getWindowHandle();
+	}
+	
+	public String getValue(WebDriver driver, String locator) {
+		WebElement webElement = getElement(driver, locator);
+		String value = webElement.getAttribute("value");
+		return value;
 	}
 	
 }

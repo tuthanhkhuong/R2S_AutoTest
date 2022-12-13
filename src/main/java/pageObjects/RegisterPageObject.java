@@ -39,15 +39,15 @@ public class RegisterPageObject extends BasePage{
 	}
 	
 	public void clickToRegisterDayOfBirth(String value) {
-		clickToElement(driver, RegisterPageUI.REGISTER_DAYOFBIRTH_DROPLIST);
+		clickAndSenkeyToElement(driver, RegisterPageUI.REGISTER_DAYOFBIRTH_DROPLIST ,value);
 	}
 	
 	public void clickToRegisterMonthOfBirth(String value) {
-		clickToElement(driver, RegisterPageUI.REGISTER_MONTHOFBIRTH_DROPLIST);
+		clickAndSenkeyToElement(driver, RegisterPageUI.REGISTER_MONTHOFBIRTH_DROPLIST,value);
 	}
 	
 	public void clickToRegisterYearOfBirth(String value) {
-		clickToElement(driver, RegisterPageUI.REGISTER_YEAROFBIRTH_DROPLIST);
+		clickAndSenkeyToElement(driver, RegisterPageUI.REGISTER_YEAROFBIRTH_DROPLIST,value);
 	}
 	
 	public void inputToRegisterCompanyTextBox(String value) {
