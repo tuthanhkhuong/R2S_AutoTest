@@ -25,6 +25,7 @@ public class TS_02_Login extends BaseTest {
 		loginPage = new LoginPageObject(driver);
 	}
 
+	
 	@AfterClass
 	public void afterClass() {
 		driver.quit();

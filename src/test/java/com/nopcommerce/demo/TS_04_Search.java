@@ -22,7 +22,6 @@ public class TS_04_Search extends BaseTest{
 	
 	
 	@Parameters("browser")
-
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName, "https://demo.nopcommerce.com/login?returnUrl=%2F");

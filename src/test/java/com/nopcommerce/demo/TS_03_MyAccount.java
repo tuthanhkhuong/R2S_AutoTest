@@ -24,6 +24,7 @@ public class TS_03_MyAccount extends BaseTest {
 	
 	@Parameters("browser")
 
+	
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName, "https://demo.nopcommerce.com/customer/info");
@@ -36,6 +37,7 @@ public class TS_03_MyAccount extends BaseTest {
 	public void afterClass() {
 		driver.quit();
 	}
+
 
 	@Test
 	public void TC_00_Login() {

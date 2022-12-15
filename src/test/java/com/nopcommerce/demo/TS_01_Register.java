@@ -20,7 +20,6 @@ public class TS_01_Register extends BaseTest {
 	
 	@Parameters("browser")
 	
-	
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName, "https://demo.nopcommerce.com/register?returnUrl=%2F");
