@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="TS_06_ShoppingCart">
-  <test name="TS_06_ShoppingCart">
+<suite name="TS_AllCase">
+  <test name="TS_AllCase">
   <parameter name="browser" value="chrome"></parameter>
     <classes>
     <class name="com.nopcommerce.demo.TS_01_Register"/>
@@ -11,5 +11,5 @@
     <class name="com.nopcommerce.demo.TS_05_WishList"/>
     <class name="com.nopcommerce.demo.TS_06_ShoppingCart"/>
     </classes>
-  </test> <!-- TS_06_ShoppingCart -->
-</suite> <!-- TS_06_ShoppingCart -->
+  </test> <!-- TS_AllCase -->
+</suite> <!-- TS_AllCase -->
