@@ -15,6 +15,8 @@ public class TS_02_Login extends BaseTest {
 	LoginPageObject loginPage;
 
 	public String email = "finaltest@gmail.com";
+	public String email1 = "ftest@gmail.com";
+	public String password = "Abcd1234";
 	
 	@Parameters("browser")
 
@@ -35,7 +37,6 @@ public class TS_02_Login extends BaseTest {
 	public void TC_01_LoginWithEmptyData() {
 		loginPage.clickToLoginButton();
 		
-		//THEM MAY CAI MESS DAU *
 		Assert.assertTrue(loginPage.isEmailErrorMessage("Please enter your email"));
 	}
 
@@ -44,14 +45,16 @@ public class TS_02_Login extends BaseTest {
 		loginPage.refeshCurrentPage(driver);
 		loginPage.inputToEmailTextBox("abcd");
 		loginPage.clickToLoginButton();
+		
 		Assert.assertTrue(loginPage.isEmailErrorMessage("Wrong email"));
 	}
 
 	@Test
 	public void TC_03_LoginWithUnregisteredEmail() {
 		loginPage.refeshCurrentPage(driver);
-		loginPage.inputToEmailTextBox(email);
+		loginPage.inputToEmailTextBox(email1);
 		loginPage.clickToLoginButton();
+		
 		Assert.assertTrue(
 				loginPage.isLoginErrorMessage("Login was unsuccessful. Please correct the errors and try again"));
 		Assert.assertTrue(loginPage.isLoginErrorMessage("No customer account found"));
@@ -74,6 +77,7 @@ public class TS_02_Login extends BaseTest {
 		loginPage.inputToEmailTextBox(email);
 		loginPage.inputToPasswordTextBox("abcdef123555");
 		loginPage.clickToLoginButton();
+		
 		Assert.assertTrue(loginPage
 				.isRegisterdEmailErrorMessage("Login was unsuccessful. Please correct the errors and try again"));
 		Assert.assertTrue(loginPage.isRegisterdEmailErrorMessage("The credentials provided are incorrect"));
@@ -83,7 +87,7 @@ public class TS_02_Login extends BaseTest {
 	public void TC_06_LoginWithRegisteredEmail() {
 		loginPage.refeshCurrentPage(driver);
 		loginPage.inputToEmailTextBox(email);
-		loginPage.inputToPasswordTextBox("abcd1234");
+		loginPage.inputToPasswordTextBox(password);
 		loginPage.clickToLoginButton();
 
 		String parentID = loginPage.getWindowHandle(driver);

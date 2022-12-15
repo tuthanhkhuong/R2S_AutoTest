@@ -18,7 +18,7 @@ public class TS_04_Search extends BaseTest{
 
 	
 	public String email = "finaltest@gmail.com";
-	public String password = "Abcd1234";
+	public String password = "7290612";
 	
 	
 	@Parameters("browser")
