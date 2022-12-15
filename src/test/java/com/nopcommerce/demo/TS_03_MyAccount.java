@@ -121,7 +121,7 @@ public class TS_03_MyAccount extends BaseTest {
 		MyAccountPage.clickToLoginButton();
 		Assert.assertTrue(
 				loginPage.isLoginErrorMessage("Login was unsuccessful. Please correct the errors and try again"));
-		Assert.assertTrue(loginPage.isLoginErrorMessage("No customer account found"));
+		Assert.assertTrue(loginPage.isLoginErrorMessage("The credentials provided are incorrect"));
 
 		// Nhap pass moi
 		MyAccountPage.refeshCurrentPage(driver);
