@@ -14,6 +14,8 @@ public class TS_02_Login extends BaseTest {
 	WebDriver driver;
 	LoginPageObject loginPage;
 
+	public String email = "finaltest@gmail.com";
+	
 	@Parameters("browser")
 
 	@BeforeClass
@@ -47,7 +49,7 @@ public class TS_02_Login extends BaseTest {
 	@Test
 	public void TC_03_LoginWithUnregisteredEmail() {
 		loginPage.refeshCurrentPage(driver);
-		loginPage.inputToEmailTextBox("abcd@gmail.com");
+		loginPage.inputToEmailTextBox(email);
 		loginPage.clickToLoginButton();
 		Assert.assertTrue(
 				loginPage.isLoginErrorMessage("Login was unsuccessful. Please correct the errors and try again"));
@@ -57,7 +59,7 @@ public class TS_02_Login extends BaseTest {
 	@Test
 	public void TC_04_LoginWithRegisteredEmail() {
 		loginPage.refeshCurrentPage(driver);
-		loginPage.inputToEmailTextBox("finaltest@gmail.com");
+		loginPage.inputToEmailTextBox(email);
 		loginPage.inputToPasswordTextBox("");
 		loginPage.clickToLoginButton();
 		Assert.assertTrue(loginPage
@@ -68,7 +70,7 @@ public class TS_02_Login extends BaseTest {
 	@Test
 	public void TC_05_LoginWithRegisteredEmail() {
 		loginPage.refeshCurrentPage(driver);
-		loginPage.inputToEmailTextBox("finaltest@gmail.com");
+		loginPage.inputToEmailTextBox(email);
 		loginPage.inputToPasswordTextBox("abcdef123555");
 		loginPage.clickToLoginButton();
 		Assert.assertTrue(loginPage
@@ -79,7 +81,7 @@ public class TS_02_Login extends BaseTest {
 	@Test
 	public void TC_06_LoginWithRegisteredEmail() {
 		loginPage.refeshCurrentPage(driver);
-		loginPage.inputToEmailTextBox("finaltest@gmail.com");
+		loginPage.inputToEmailTextBox(email);
 		loginPage.inputToPasswordTextBox("abcd1234");
 		loginPage.clickToLoginButton();
 

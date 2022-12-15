@@ -16,6 +16,11 @@ public class TS_04_Search extends BaseTest{
 	LoginPageObject loginPage;
 	SearchPageObject searchPage;
 
+	
+	public String email = "finaltest@gmail.com";
+	public String password = "Abcd1234";
+	
+	
 	@Parameters("browser")
 
 	@BeforeClass
@@ -34,8 +39,8 @@ public class TS_04_Search extends BaseTest{
 
 	@Test
 	public void TC_00_Login() {
-		loginPage.inputToEmailTextBox("finaltest@gmail.com");
-		loginPage.inputToPasswordTextBox("abcd1234");
+		loginPage.inputToEmailTextBox(email);
+		loginPage.inputToPasswordTextBox(password);
 		loginPage.clickToLoginButton();
 	}
 	

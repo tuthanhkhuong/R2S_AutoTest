@@ -17,6 +17,11 @@ public class TS_03_MyAccount extends BaseTest {
 	MyAccountPageObject MyAccountPage;
 	LoginPageObject loginPage;
 
+	
+	public String email = "finaltest@gmail.com";
+	public String password = "Abcd1234";
+	public String newPassword = "7290612";
+	
 	@Parameters("browser")
 
 	@BeforeClass
@@ -34,8 +39,8 @@ public class TS_03_MyAccount extends BaseTest {
 
 	@Test
 	public void TC_00_Login() {
-		MyAccountPage.inputEmailTextBox("finaltest@gmail.com");
-		MyAccountPage.inputPasswordTextBox("abcd1234");
+		MyAccountPage.inputEmailTextBox(email);
+		MyAccountPage.inputPasswordTextBox(password);
 		
 		MyAccountPage.clickToLoginButton();
 
@@ -49,7 +54,7 @@ public class TS_03_MyAccount extends BaseTest {
 		MyAccountPage.changeFeMaleRaido();
 		MyAccountPage.changeFirstnameTextBox("Thanh");
 		MyAccountPage.changeLastnameTextBox("Khuong");
-		MyAccountPage.ChangeEmailTextBox("finaltest@gmail.com");
+		MyAccountPage.ChangeEmailTextBox(email);
 		MyAccountPage.changeDayOfBirth("10");
 		MyAccountPage.changeMonthOfBirth("January");
 		MyAccountPage.changeYearOfBirth("2012");
@@ -61,7 +66,7 @@ public class TS_03_MyAccount extends BaseTest {
 		Assert.assertTrue(MyAccountPage.isNewUpdateInfo(MyAccountPageUI.MYACCOUNT_FIRST_NAME_TEXTBOX, "Thanh"));
 		Assert.assertTrue(MyAccountPage.isNewUpdateInfo(MyAccountPageUI.MYACCOUNT_LAST_NAME_TEXTBOX, "Khuong"));
 		Assert.assertTrue(
-				MyAccountPage.isNewUpdateInfo(MyAccountPageUI.MYACCOUNT_EMAIL_TEXTBOX, "finaltest@gmail.com"));
+				MyAccountPage.isNewUpdateInfo(MyAccountPageUI.MYACCOUNT_EMAIL_TEXTBOX, email));
 
 	}
 
@@ -73,7 +78,7 @@ public class TS_03_MyAccount extends BaseTest {
 
 		MyAccountPage.addFirstNameTextBox("Thanh");
 		MyAccountPage.addLastNameTextBox("Khuong");
-		MyAccountPage.addEmailTextBox("finaltest@gmail.com");
+		MyAccountPage.addEmailTextBox(email);
 		MyAccountPage.addCountryTextBox("Viet Nam");
 		MyAccountPage.addCityTextBox("Ho Chi Minh");
 		MyAccountPage.addAddress1TextBox("3066/1 Le Thi Hoa");
@@ -83,7 +88,7 @@ public class TS_03_MyAccount extends BaseTest {
 		MyAccountPage.clickToSaveAddressesButton();
 
 		Assert.assertTrue(
-				MyAccountPage.isNewUpdateAdrressInfo(MyAccountPageUI.ADDRESS_EMAIL_TEXT, "finaltest@gmail.com"));
+				MyAccountPage.isNewUpdateAdrressInfo(MyAccountPageUI.ADDRESS_EMAIL_TEXT, email));
 		Assert.assertTrue(MyAccountPage.isNewUpdateAdrressInfo(MyAccountPageUI.ADDRESS_PHONE_TEXT, "0392543689"));
 
 	}
@@ -93,9 +98,9 @@ public class TS_03_MyAccount extends BaseTest {
 		MyAccountPage.clickToChangePasswordLable();
 		MyAccountPage.refeshCurrentPage(driver);
 
-		MyAccountPage.inputToOldPassWordTextbox("abcd1234");
-		MyAccountPage.inputToNewPassWordTextbox("7290612");
-		MyAccountPage.inputToConfirmNewPasswordTextbox("7290612");
+		MyAccountPage.inputToOldPassWordTextbox(password);
+		MyAccountPage.inputToNewPassWordTextbox(newPassword);
+		MyAccountPage.inputToConfirmNewPasswordTextbox(newPassword);
 		
 		MyAccountPage.clickToChangePasswordButton();
 		
@@ -108,8 +113,8 @@ public class TS_03_MyAccount extends BaseTest {
 		MyAccountPage.clickToLogInLable();
 
 		// Nhap pass cu
-		MyAccountPage.inputEmailTextBox("finaltest@gmail.com");
-		MyAccountPage.inputPasswordTextBox("abcd1234");
+		MyAccountPage.inputEmailTextBox(email);
+		MyAccountPage.inputPasswordTextBox(password);
 
 		MyAccountPage.clickToLoginButton();
 		Assert.assertTrue(
@@ -119,8 +124,8 @@ public class TS_03_MyAccount extends BaseTest {
 		// Nhap pass moi
 		MyAccountPage.refeshCurrentPage(driver);
 		
-		MyAccountPage.inputEmailTextBox("finaltest@gmail.com");
-		MyAccountPage.inputPasswordTextBox("7290612");
+		MyAccountPage.inputEmailTextBox(email);
+		MyAccountPage.inputPasswordTextBox(newPassword);
 		
 		MyAccountPage.clickToLoginButton();
 		Assert.assertEquals(loginPage.getPageTitle(driver), "nopCommerce demo store");

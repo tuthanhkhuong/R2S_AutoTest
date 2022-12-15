@@ -68,6 +68,16 @@ public class RegisterPageObject extends BasePage{
 		return message.contains(value);
 	}
 	
+	public boolean isRegisterFirstNameTextBoxWithEmptyData(String value) {
+		String message = getTextElement(driver,RegisterPageUI.REGISTER_FIRSTNAME_ERROR_MESSAGE);
+		return message.contains(value);
+	}
+	
+	public boolean isRegisterLastNameTextBoxWithEmptyData(String value) {
+		String message = getTextElement(driver,RegisterPageUI.REGISTER_LASTNAME_ERROR_MESSAGE);
+		return message.contains(value);
+	}
+	
 	public boolean isRegisterEmailTextBoxWithIvalidData(String value) {
 		String message = getTextElement(driver,RegisterPageUI.EMAIL_ERROR_MESSAGE);
 		return message.contains(value);

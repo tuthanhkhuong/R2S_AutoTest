@@ -14,7 +14,9 @@ public class TS_01_Register extends BaseTest {
 	WebDriver driver;
 	RegisterPageObject registerPage;
 
-	//String projectPath = System.getProperty("user.dir");
+	public String email = "finaltest@gmail.com";
+	public String password = "Abcd1234";
+	
 	
 	@Parameters("browser")
 	
@@ -42,7 +44,12 @@ public class TS_01_Register extends BaseTest {
 	@Test
 	public void TC_01_RegisterWithEmptyData() {
 		registerPage.clickToRegisterButton();
+		
+		Assert.assertTrue(registerPage.isRegisterFirstNameTextBoxWithEmptyData("First name is required."));
+		Assert.assertTrue(registerPage.isRegisterLastNameTextBoxWithEmptyData("Last name is required."));
 		Assert.assertTrue(registerPage.isRegisterEmailTextBoxWithEmptyData("Email is required."));
+		Assert.assertTrue(registerPage.isRegisterPassTextBoxWithLess6Key("Password is required."));
+		Assert.assertTrue(registerPage.isRegisterPassTextBoxWithUncorrectComfirm("Password is required."));
 	}
 
 	@Test
@@ -50,6 +57,7 @@ public class TS_01_Register extends BaseTest {
 		registerPage.refeshCurrentPage(driver);
 		registerPage.inputToRegisterEmailTextBox("abcd");
 		registerPage.clickToRegisterButton();
+		
 		Assert.assertTrue(registerPage.isRegisterEmailTextBoxWithIvalidData("Wrong email"));
 	}
 
@@ -64,10 +72,10 @@ public class TS_01_Register extends BaseTest {
 		registerPage.clickToRegisterDayOfBirth("1");
 		registerPage.clickToRegisterMonthOfBirth("May");
 		registerPage.clickToRegisterYearOfBirth("2000");
-		registerPage.inputToRegisterEmailTextBox("finaltest@gmail.com");
+		registerPage.inputToRegisterEmailTextBox(email);
 		registerPage.inputToRegisterCompanyTextBox("none");
-		registerPage.inputToRegisterPasswordTextBox("abcd1234");
-		registerPage.inputToRegisterConfirmPasswordTextBox("abcd1234");
+		registerPage.inputToRegisterPasswordTextBox(password);
+		registerPage.inputToRegisterConfirmPasswordTextBox(password);
 
 		registerPage.clickToRegisterButton();
 		Assert.assertTrue(registerPage.isRegisterSuccess("Your registration completed"));
@@ -84,10 +92,10 @@ public class TS_01_Register extends BaseTest {
 		registerPage.clickToRegisterDayOfBirth("25");
 		registerPage.clickToRegisterMonthOfBirth("May");
 		registerPage.clickToRegisterYearOfBirth("2010");
-		registerPage.inputToRegisterEmailTextBox("finaltest@gmail.com");
+		registerPage.inputToRegisterEmailTextBox(email);
 		registerPage.inputToRegisterCompanyTextBox("none");
-		registerPage.inputToRegisterPasswordTextBox("abcd1234");
-		registerPage.inputToRegisterConfirmPasswordTextBox("abcd1234");
+		registerPage.inputToRegisterPasswordTextBox(password);
+		registerPage.inputToRegisterConfirmPasswordTextBox(password);
 
 		registerPage.clickToRegisterButton();
 		Assert.assertTrue(registerPage.isRegisterEmailTextBoxWithExistsEmail("The specified email already exists"));
@@ -98,6 +106,7 @@ public class TS_01_Register extends BaseTest {
 		registerPage.refeshCurrentPage(driver);
 		registerPage.inputToRegisterPasswordTextBox("abc");
 		registerPage.clickToRegisterButton();
+		
 		Assert.assertTrue(registerPage.isRegisterPassTextBoxWithLess6Key("Password must meet the following rules:"));
 		Assert.assertTrue(registerPage.isRegisterPassTextBoxWithLess6Key("must have at least 6 characters"));
 	}
@@ -105,9 +114,10 @@ public class TS_01_Register extends BaseTest {
 	@Test
 	public void TC_06_RegisterWithPasswordLessThan6Keys() {
 		registerPage.refeshCurrentPage(driver);
-		registerPage.inputToRegisterPasswordTextBox("abcd1234");
+		registerPage.inputToRegisterPasswordTextBox(password);
 		registerPage.inputToRegisterConfirmPasswordTextBox("abcd");
-		registerPage.clickToRegisterButton();
+		
+		registerPage.clickToRegisterButton();		
 		Assert.assertTrue(registerPage
 				.isRegisterPassTextBoxWithUncorrectComfirm("The password and confirmation password do not match."));
 	}
