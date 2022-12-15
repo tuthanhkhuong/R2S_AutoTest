@@ -21,7 +21,7 @@ public class TS_06_ShoppingCart extends BaseTest {
 	ShoppingCartPageObject shoppingCartPage;
 
 	public String email = "finaltest@gmail.com";
-	public String password = "Abcd1234";
+	public String password = "7290612";
 	
 	@Parameters("browser")
 
