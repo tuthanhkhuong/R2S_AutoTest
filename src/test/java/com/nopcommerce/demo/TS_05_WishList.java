@@ -19,7 +19,7 @@ public class TS_05_WishList extends BaseTest {
 	WishListPageObject wishLishPage;
 
 	public String email = "finaltest@gmail.com";
-	public String password = "Abcd1234";
+	public String password = "7290612";
 	
 	@Parameters("browser")
 
