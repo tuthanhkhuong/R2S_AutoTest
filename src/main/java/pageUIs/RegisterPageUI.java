@@ -24,4 +24,5 @@ public class RegisterPageUI {
 	public static final String REGISTER_SUCCESS_MESSAGE = "//div[@class='result']";
 	public static final String REGISTER_FIRSTNAME_ERROR_MESSAGE = "//span[@id='FirstName-error']";
 	public static final String REGISTER_LASTNAME_ERROR_MESSAGE = "//span[@id='LastName-error']";
+	
 }
