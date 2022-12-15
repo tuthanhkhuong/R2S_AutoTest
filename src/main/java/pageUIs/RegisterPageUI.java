@@ -5,6 +5,8 @@ public class RegisterPageUI {
 	public static final String REGISTER_PASSWORD_TEXTBOX = "//input[@id='Password']";
 	public static final String REGISTER_CONFIRM_PASSWORD_TEXTBOX = "//input[@id='ConfirmPassword']";
 
+	public static final String REGISTER_LOGOUT_LABEL = "//a[@class='ico-logout']";
+	
 	public static final String REGISTER_MALE_RADIO_BUTTON = "//input[@id='gender-male']";
 	public static final String REGISTER_FIRST_NAME_TEXTBOX = "//input[@id='FirstName']";
 	public static final String REGISTER_LAST_NAME_TEXTBOX = "//input[@id='LastName']";

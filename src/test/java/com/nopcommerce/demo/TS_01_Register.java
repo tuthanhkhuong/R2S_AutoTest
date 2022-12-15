@@ -60,7 +60,7 @@ public class TS_01_Register extends BaseTest {
 		Assert.assertTrue(registerPage.isRegisterEmailTextBoxWithIvalidData("Wrong email"));
 	}
 
-	// Dang ky tai khoan (Thay doi gia tri Email moi lan dang ky)
+	
 	@Test
 	public void TC_03_RegisterSuccess() {
 		registerPage.refeshCurrentPage(driver);
@@ -82,9 +82,12 @@ public class TS_01_Register extends BaseTest {
 
 	@Test
 	public void TC_04_RegisterWithExistsEmail() {
-		registerPage.openUrl(driver, "https://demo.nopcommerce.com/register?returnUrl=%2F");
+		registerPage.openUrl(driver, "https://demo.nopcommerce.com/");
 		registerPage.refeshCurrentPage(driver);
 
+		registerPage.clickToLogOutLabel();
+		
+		registerPage.openUrl(driver, "https://demo.nopcommerce.com/register?returnUrl=%2F");
 		registerPage.clickToMaleRaido();
 		registerPage.inputToRegisterFirstnameTextBox("AAAA");
 		registerPage.inputToRegisterLastnameTextBox("BBB");

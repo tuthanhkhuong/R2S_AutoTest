@@ -60,6 +60,10 @@ public class RegisterPageObject extends BasePage{
 		clickToElement(driver, RegisterPageUI.REGISTER_BUTTON);
 	}
 	
+	public void clickToLogOutLabel() {
+		clickToElement(driver, RegisterPageUI.REGISTER_LOGOUT_LABEL);
+	}
+	
 	
 	//------------Verify Message------------
 
