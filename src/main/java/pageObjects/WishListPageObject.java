@@ -66,4 +66,5 @@ public class WishListPageObject extends BasePage{
 		String message = getTextElement(driver, WishListPageUI.WISTHLIST_ADDTO_CART_MESSAGE);
 		return message.contains(value);
 	}
+	
 }
