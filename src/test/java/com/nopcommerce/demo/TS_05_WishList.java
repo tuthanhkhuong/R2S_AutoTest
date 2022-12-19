@@ -33,7 +33,6 @@ public class TS_05_WishList extends BaseTest {
 	}
 
 	
-	
 	@AfterClass
 	public void afterClass() {
 		driver.quit();

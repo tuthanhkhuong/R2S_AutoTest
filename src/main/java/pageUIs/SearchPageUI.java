@@ -12,4 +12,5 @@ public class SearchPageUI {
 	//-------------ERROR MESSAGE-------------
 	public static final String EMPTY_DATA_ERROR_MESSAGE = "//div[@class='warning']";
 	public static final String NO_VALIDDATA_ERROR_MESSAGE = "//div[@class='no-result']";
+	
 }

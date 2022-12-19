@@ -24,14 +24,6 @@ public class TS_01_Register extends BaseTest {
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName, "https://demo.nopcommerce.com/register?returnUrl=%2F");
 		
-		/*
-		System.setProperty("webdriver.chrome.driver", projectPath + "/browserDrivers/chromedriver.exe");
-        driver = new ChromeDriver();
-        //Can chinh khung cua so
-        driver.manage().window().maximize();
-        driver.get("https://demo.nopcommerce.com/register?returnUrl=%2F");
-        */
-		
 		registerPage = new RegisterPageObject(driver);
 	}
 

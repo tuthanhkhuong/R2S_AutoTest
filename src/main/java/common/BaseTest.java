@@ -24,7 +24,7 @@ public class BaseTest {
 			driver = new FirefoxDriver();
 		}
 		
-		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 		// Can chinh khung cua so
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

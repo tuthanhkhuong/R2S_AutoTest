@@ -9,4 +9,5 @@ public class ShoppingCartPageUI {
 	
 	//-------------ERROR MESSAGE-------------
 	public static final String SHOPPINGCART_EMPTY_MESSAGE = "//div[@class='no-data']";	
+	
 }

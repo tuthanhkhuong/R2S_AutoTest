@@ -67,4 +67,5 @@ public class WishListPageObject extends BasePage{
 		return message.contains(value);
 	}
 	
+	
 }

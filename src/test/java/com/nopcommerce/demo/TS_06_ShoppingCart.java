@@ -36,7 +36,6 @@ public class TS_06_ShoppingCart extends BaseTest {
 	}
 
 	
-	
 	@AfterClass
 	public void afterClass() {
 		driver.quit();

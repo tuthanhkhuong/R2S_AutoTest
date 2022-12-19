@@ -63,4 +63,5 @@ public class MyAccountPageUI {
 	public static final String LOGOUT_LABLE = "//a[@class='ico-logout']";
 	public static final String LOGIN_LABLE = "//a[@class='ico-login']";
 	public static final String SPAN_CLOSE_BUTTON = "//span[@class='close']";
+	
 }

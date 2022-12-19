@@ -103,5 +103,4 @@ public class TS_04_Search extends BaseTest{
 		Assert.assertFalse(searchPage.isVerifyProductHaveKey("Apple Macbook Pro"));
 	}
 	
-	
 }

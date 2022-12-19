@@ -107,5 +107,4 @@ public class RegisterPageObject extends BasePage{
 		return message.contains(value);
 	}
 	
-	
 }

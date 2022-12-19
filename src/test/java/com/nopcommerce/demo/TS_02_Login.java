@@ -96,4 +96,5 @@ public class TS_02_Login extends BaseTest {
 		Assert.assertEquals(loginPage.getPageTitle(driver), "nopCommerce demo store");
 		driver.switchTo().window(parentID);
 	}
+	
 }

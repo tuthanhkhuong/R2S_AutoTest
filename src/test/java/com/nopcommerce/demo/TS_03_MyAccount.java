@@ -133,4 +133,5 @@ public class TS_03_MyAccount extends BaseTest {
 		Assert.assertEquals(loginPage.getPageTitle(driver), "nopCommerce demo store");
 	}
 
+	
 }

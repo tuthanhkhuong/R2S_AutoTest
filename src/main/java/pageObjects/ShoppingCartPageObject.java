@@ -43,4 +43,5 @@ public class ShoppingCartPageObject extends BasePage{
 		String message = getTextElement(driver, ShoppingCartPageUI.SHOPPINGCART_EMPTY_MESSAGE);
 		return message.contains(value);
 	}
+	
 }

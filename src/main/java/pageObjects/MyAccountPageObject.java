@@ -189,4 +189,5 @@ public class MyAccountPageObject extends BasePage {
 			}
 		}
 	}
+	
 }

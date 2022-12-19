@@ -18,4 +18,5 @@ public class WishListPageUI {
 	public static final String WISTHLIST_NOTIFICATION_MESSAGE = "//div[@class='bar-notification success']";
 	public static final String WISTHLIST_ADDTO_CART_MESSAGE = "//div[@class='bar-notification warning']";
 	
+	
 }

@@ -8,5 +8,4 @@ public class LoginPageUI {
 	public static final String LOGIN_ERORR_MESSAGE = "//div[@class='message-error validation-summary-errors']";
 	public static final String REGISTERED_EMAIL_ERROR_MESSAGE = "//div[@class='message-error validation-summary-errors']";
 	
-	
 }
